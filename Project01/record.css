@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 90vh;
     width: 100%;
     background: rgb(255, 255, 241);
     border-top: 20px solid #bd4b16;
@@ -15,12 +15,46 @@
     top: 30vh;
 }
 /* inner */
-.recorder {
+#rcdPlayer {
     width: 800px;
     height: 55vh;
     background: linear-gradient(100deg, #cb3e0b, #c43007);
     border-radius: 12px;
     margin-bottom: 200px;
+}
+/* Lower part of the turntable*/
+.low {
+    background-color: aqua;
+    width: 250px;
+    height: 27vh;
+}
+#turntable{
+    display: flex;
+    justify-content: space-between;
+}
+#playerBtns{
+    position: relative;
+    width: 250px;
+    height: 27vh;
+}
+#controller {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: #fdf9b4;
+    border-radius: 50%;
+    top: 35px;
+    left: 100px;
+}
+#ear{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 68px solid #fdf9b4;
+    top: 97px;
+    left: 72px;
 }
 .vinyl {
     width: 180px;
@@ -31,17 +65,22 @@
 /* the sky */
 .scene {
     width: 100%;
-    height: 260px;
+    height: 40vh;
     position: fixed;
     z-index: -1;
 }
 .scenery{
     width: 100%;
     height: 200px;
-    background-color: aqua;
+    /*background-color: aqua;*/
     position: absolute;
     z-index: 1;
     text-align: center;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+h1 {
+    font-size: 80px;
 }
 /* the outer wall */
 #vbtn{
@@ -63,12 +102,36 @@
     border-top: 10px double rgb(255, 255, 241);
     position: relative;
     z-index: 5;
+    margin-top: 10px;
 }
 .recStore {
-    height: 20vh;
+    height: 25vh;
     top: -13px;
 }
 .recStoreOpen{
  height: 50vh;
  top: -120px;
+}
+.rd{
+    width: 140px;
+    height: 140px;
+    background: #f9ee8f;
+    margin: 20px;
+    display: inline-block;
+}
+/*
+#records{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+*/
+#records {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
 }
