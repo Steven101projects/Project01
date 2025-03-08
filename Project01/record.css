@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-}
+} 
 /* the main wall */
 .recordStation{
     display: flex;
@@ -21,21 +21,124 @@
     background: linear-gradient(100deg, #cb3e0b, #c43007);
     border-radius: 12px;
     margin-bottom: 200px;
+    box-shadow: 1px 1px 2px 3px rgba(103, 100, 103, 0.59);
 }
 /* Lower part of the turntable*/
 .low {
-    background-color: aqua;
     width: 250px;
     height: 27vh;
 }
 #turntable{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
+/* 1/3 */
+#descrip{
+    color: white;
+    font-size: 27px;
+}
+#songTitle{
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+/* 2/3 */
+#centor{
+    margin: 0px 12px 0px 12px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+#albumCard{
+    background-color: black;
+    height: 1.2em;
+    width: auto;
+    color: white;
+    text-align: end;
+    font-size: 1.1em;
+    padding: 2px;
+    margin-top: 30px;
+}
+#albumDetails{
+    background-color: black;
+    margin-top: 5px;
+    height: 3em;
+    width: auto;
+    color: white;
+    font-size: 1.1em;
+    padding: 2px;
+}
+#albumTime{
+    margin-top: 20px;
+}
+#slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 50px;
+    outline: none;
+    background: linear-gradient(to right, #000000 0%, #ffffff 0%);
+  }
+  
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+.time {
+    display: inline;
+    color: white;
+}
+#endTime {
+    margin-left: 170px;
+}
+
+/* 3/3 */
 #playerBtns{
     position: relative;
-    width: 250px;
-    height: 27vh;
+    margin-top: 20px;
+}
+#play{
+    position: absolute;
+    width: 60px;
+    height: auto;
+    top: 80px;
+    left: 143px;
+    z-index: 1;
+    cursor: pointer; 
+}
+#pause{
+    position: absolute;
+    width: 60px;
+    height: auto;
+    top: 80px;
+    left: 143px;
+    z-index: 1;
+    cursor: pointer; 
+    display: none;
+}
+#nextR{
+    position: absolute;
+    width: 28px;
+    height: auto;
+    top: 48px;
+    left: 185px;
+    z-index: 1;   
+    cursor: pointer; 
+}
+#nextL{
+    position: absolute;
+    width: 28px;
+    height: auto;
+    top: 110px;
+    left: 105px;
+    z-index: 1;  
+    cursor: pointer; 
 }
 #controller {
     position: absolute;
@@ -43,7 +146,7 @@
     height: 130px;
     background-color: #fdf9b4;
     border-radius: 50%;
-    top: 35px;
+    top: 20px;
     left: 100px;
 }
 #ear{
@@ -53,15 +156,17 @@
     border-left: 40px solid transparent;
     border-right: 50px solid transparent; 
     border-bottom: 68px solid #fdf9b4;
-    top: 97px;
+    top: 82px;
     left: 72px;
 }
 .vinyl {
     width: 180px;
     height: 180px;
     background: #f9ee8f;
-    margin: 20px 20px;
+    margin: 15px 20px 5px 20px;
 }
+
+
 /* the sky */
 .scene {
     width: 100%;
@@ -72,16 +177,21 @@
 .scenery{
     width: 100%;
     height: 200px;
-    /*background-color: aqua;*/
+    /* background-color: aqua; */
     position: absolute;
     z-index: 1;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     color: rgb(255, 255, 255);
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    letter-spacing: normal;
 }
 h1 {
     font-size: 80px;
 }
+
+
 /* the outer wall */
 #vbtn{
     height: auto;

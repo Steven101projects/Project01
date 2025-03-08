@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="record.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+
     <title>SOUNDPEACE</title>
 </head>
 <body>
@@ -17,15 +19,36 @@
     <div id="rcdPlayer">
         <div class="vinyl"></div>
         <div id="turntable">
-            <div id="descrip" class="low"></div>
-            <div id="centor" class="low"></div>
-            <div id="playerBtns" >
+            <div id="descrip" class="low">
+                <div id="songTitle"><p>India Rubber</p></div>
+            </div>
+            <div id="centor">
+                <div id="albumCard">
+                    <p id="albumTitle">Unknown</p>
+                </div>
+                <div id="albumDetails">
+                    <p id="albumArtist">Artist: Unknown</p>
+                    <p id="albumYear">Year: 2000</p>
+                </div>
+                <div id="albumTime">
+                    <div id="timeline">
+                        <input type="range" value="0" id="slider" min="0" max="100">
+                    </div>
+                    <p id="startTime" class="time">00:00</p>
+                    <p id="endTime" class="time">00:00</p>
+                </div>
+            </div>
+            <div id="playerBtns" class="low">
+                <img src="playBtn.png" alt="" id="play"/>
+                <img src="nextBtn.png" alt="" id="nextR"/>
+                <img src="nextBtnL.png" alt="" id="nextL"/>
+                <img src="pausebut.png" alt="" id="pause"/>
                 <div id="ear"></div>
                 <div id="controller"></div>
             </div>           
         </div>
     </div> 
-</div>    
+</div> 
 <input type="image" src="vinylbutton.png" id="vbtn" class="rcdButton" alt="record_button"/>
 <div class="recStore" id="recordStore">
     <div id="records">

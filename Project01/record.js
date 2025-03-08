@@ -46,3 +46,20 @@ function StoreContents() {
     thrcds.style.paddingLeft = "0px";
     }
 }
+
+let play = document.getElementById("play");
+let pause = document.getElementById("pause");
+
+play.onclick = function(){
+    pause.style.display = "block";
+    play.style.display  = "none";
+}
+pause.onclick = function(){
+    pause.style.display = "none";
+    play.style.display  = "block";
+}
+let slider = document.getElementById("slider");
+
+slider.addEventListener("input", function(){
+ slider.style.background = `linear-gradient(to right, #000000 ${slider.value}%, #ffffff 0%)`;  
+})
