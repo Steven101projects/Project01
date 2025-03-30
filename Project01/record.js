@@ -1,11 +1,21 @@
 var r = true;
+var signal = 0;
 let recordButton = document.getElementById("vbtn");
 let recordStr = document.getElementById("recordStore");
 let thrcds = document.getElementById("records");
 let maxScroll;
 
+let audio = document.getElementById("audio");
+
 let startTime = document.getElementById("startTime");
 let endTime = document.getElementById("endTime");
+
+let home = document.getElementById("home");
+
+home.onclick = function() {
+    document.getElementById("rcdPlayer").style.display = "block";
+    signal = 0;
+}
 
 recordButton.onclick = function() {
     console.log("shshs");
@@ -98,3 +108,27 @@ audio.addEventListener('timeupdate', () => {
     startTime.textContent = `${current}`;
     endTime.textContent = `${duration}`;
   }
+
+let addTrackbtn = document.getElementById("atBtn");
+let hoverOpt = document.getElementById("hoverText");
+
+addTrackbtn.addEventListener("click", function(){
+    document.getElementById("rcdPlayer").style.display = "none";
+    signal = 1;
+})
+
+addTrackbtn.addEventListener('pointerenter', function(){
+    console.log("clicked");
+    document.getElementById("rcdPlayer").style.display = "none";
+    hoverOpt.textContent = "Add a Track to your Turntable?";
+})
+
+addTrackbtn.addEventListener('pointerleave', function(){
+    console.log("clicked");
+    if(signal === 0){
+        document.getElementById("rcdPlayer").style.display = "block";
+    } else{
+        document.getElementById("rcdPlayer").style.display = "none";
+    }
+    hoverOpt.textContent = "";
+})

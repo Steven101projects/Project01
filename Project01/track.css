@@ -1,0 +1,19 @@
+.addTrack{
+    width: 40px;
+    height: 50px;
+    background-color: #ea3030;
+    position: absolute;
+    border-radius: 0 15px 15px 0;
+    left: -28px;
+    top: 60px;
+    cursor: pointer;
+}
+
+#hoverText{
+    position: absolute;
+    color: #988f8f;
+    top: 160px;
+    width: auto;
+    height: 500px;
+    font-size: 60px;
+}

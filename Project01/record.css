@@ -16,12 +16,14 @@
 }
 /* inner */
 #rcdPlayer {
+    display: none;
     width: 800px;
     height: 55vh;
     background: linear-gradient(100deg, #cb3e0b, #c43007);
     border-radius: 12px;
     margin-bottom: 200px;
     box-shadow: 1px 1px 2px 3px rgba(103, 100, 103, 0.59);
+    cursor: pointer;
 }
 /* Lower part of the turntable*/
 .low {
