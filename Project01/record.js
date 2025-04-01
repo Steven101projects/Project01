@@ -91,7 +91,7 @@ audio.addEventListener('loadedmetadata', () => {
 
 audio.addEventListener('timeupdate', () => {
     slider.value = (audio.currentTime / audio.duration) * 100;
-    slider.style.background = `linear-gradient(to right, #000000 ${slider.value / 1}%, #ffffff 0%)`; 
+    slider.style.background = `linear-gradient(to right, #000000 ${slider.value}%, #ffffff 0%)`; 
     updateTimeDisplay()
   });
 
@@ -120,7 +120,7 @@ addTrackbtn.addEventListener("click", function(){
 addTrackbtn.addEventListener('pointerenter', function(){
     console.log("clicked");
     document.getElementById("rcdPlayer").style.display = "none";
-    hoverOpt.textContent = "Add a Track to your Turntable?";
+    hoverOpt.textContent = "Add a track to your turntable?";
 })
 
 addTrackbtn.addEventListener('pointerleave', function(){

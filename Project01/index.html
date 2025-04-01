@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="record.css">
     <link rel="stylesheet" href="track.css">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>SOUNDPEACE</title>
 </head>
 <body>
@@ -19,6 +20,32 @@
     <div class="recordStation">
     <div id="hoverText"></div>
     <div class="addTrack" id="atBtn"></div>
+    <div id="atRedFlag"></div>
+    <div id="addTracker">
+        <section id="leftside">
+            <div id="addTitle">ADD TRACKER</div>
+        <div id="albumCover"><p>Upload an Album Cover</p></div>
+        </section>
+        <div id="inputs">
+            <form>
+              <div class="inp">
+                <label for="title" class="label">Title:</label>
+                <input class="textBx" type="text" id="title" name="title" placeholder="The Bends" required>
+              </div>
+              <div class="inp">
+                <label for="year" class="label">Year:</label>
+                <input class="textBx" type="number" id="year" name="year" placeholder="1996" required>
+              </div>
+              <div class="inp">
+                <label for="author" class="label">Artist:</label>
+                <input class="textBx" type="text" id="artist" name="artist" placeholder="Radiohead" required>
+              </div>
+              <div>
+                <button id="upload" type="submit">Upload</button>
+              </div>
+            </form>
+          </div>    
+    </div>
     <div id="rcdPlayer">
         <div class="vinyl"></div>
         <div id="turntable">
