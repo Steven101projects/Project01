@@ -11,7 +11,7 @@ class Track {
     }
 }
 
-home.onclick = function (){
+document.getElementById("loadSongs").onclick = function (){
     InitProject01();
 };
 
@@ -78,9 +78,10 @@ document.getElementById("vinyl").addEventListener("drop", function(e){
             document.getElementById("vinyl").style.backgroundImage = `url(` + `${droppedId}` + `)`;
             document.getElementById("audio").src = track.source;
             document.getElementById("songTitle").textContent = track.title;
-            document.getElementById("albumTitle").textContent = track.title;
+            // document.getElementById("albumTitle").textContent = track.title;
             document.getElementById("albumYear").textContent = `Year: ${track.year}`;
             document.getElementById("albumArtist").textContent = `Artist: ${track.artist}`;
+            document.getElementById("spPlate").style.display = "block";
             break;
         }
     }

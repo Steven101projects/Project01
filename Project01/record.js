@@ -70,11 +70,14 @@ play.onclick = function(){
     pause.style.display = "block";
     play.style.display  = "none";
     document.getElementById("audio").play();
+    document.getElementById("spPlate").style.animationPlayState = 'running';
 }
 pause.onclick = function(){
     pause.style.display = "none";
     play.style.display  = "block";
     document.getElementById("audio").pause();
+    document.getElementById("spPlate").style.animationPlayState = 'paused';
+
 }
 let slider = document.getElementById("slider");
 

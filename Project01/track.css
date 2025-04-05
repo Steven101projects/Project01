@@ -146,3 +146,46 @@
     border-radius: 5px;
     color: #000000;
 }
+
+#loadSongs{
+    display: flex;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: normal;
+    font-weight: bold;
+    font-size: 10px;
+    width: 130px;
+    height: 30px;
+    background-color: #f4c383;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #2f2e2e;
+    top: 100px;
+    margin-left: 10px;
+}
+
+#highTop{
+    display: flex;
+}
+#spPlate{
+    display: none;
+    width: 180px;
+    height: 180px;
+    background-image: url(plate.png);
+    background-size: cover;
+    margin-left: 86px;
+    margin-top: 20px;
+    /* Define the rotation animation */
+  animation: spin 8s linear infinite;
+  /* Start with the animation paused */
+  animation-play-state: paused;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
