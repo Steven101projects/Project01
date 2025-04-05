@@ -1,3 +1,10 @@
+#test{
+    background-size: cover;
+}
+
+#rcdATracker{
+    display: none;
+}
 .addTrack{
     width: 40px;
     height: 50px;
@@ -8,7 +15,10 @@
     top: 60px;
     cursor: pointer;
 }
-
+#inputs{
+    padding-top: 30px;
+    padding-left: 10px;
+}
 #hoverText{
     position: absolute;
     color: #988f8f;
@@ -25,33 +35,17 @@
     margin-bottom: 150px;
     border: 2px solid #a7a5a5;
     display: flex;
+    border-radius: 9px 0px 0px 0px;
 }
-
-#albumCover{
-    display: flex;
-    width: 180px;
-    height: 180px;
-    background: #fdf9b4;
-    margin-left: 20px;
-    margin-top: 18px;
-    font-family: 'Inter', sans-serif;
-    letter-spacing: normal;
-    font-weight: bold;
-    font-size: 10px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-}
-
 #addTitle{
     text-align: center;
     width: 160px;
     font-size: 20px;
-    font-family: 'Arimo', sans-serif;
     letter-spacing: normal;
     font-weight: bold;
     color: #a7a5a5;
     margin: 11px 5px;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .inp {
@@ -59,25 +53,45 @@
     justify-content: center;
     width: 360px;
     height: 50px;
-    background-color: rgb(34, 31, 31);
+    background-color: rgb(168, 62, 12);
     color: white;
     font-family: 'Inter', sans-serif;
     letter-spacing: normal;
     border-radius: 12px;
     font-size: 13px;
-    margin: 25px 0px 0px 60px;
+    margin: 20px 0px 0px 60px;
     box-shadow:
     inset 0 2px 5px rgba(0, 0, 0, 0.8),
     inset 0 -2px 5px rgba(0, 0, 0, 0.4);
 }
+#albumCover{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    background: #fdf9b4;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-right: -10px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: normal;
+    font-weight: bold;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.5s ease-in;
+    background-size: cover;
+}
+#albumCover:hover {
+    background: #fbf857;
+    background-size: cover;
+}
+
 .label{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 50px;
-}
-#inputs{
-    padding-top: 30px;
 }
 .textBx{
     height: 30px;
@@ -86,25 +100,49 @@
     width: 180px;
 }
 #upload{
-    width: 70px;
+    width: 90px;
     height: 40px;
-      color: #fff;
+      color: rgb(249, 249, 249);
       cursor: pointer;
-    background-color: rgba(255, 185, 44, 0.895);
-    transition: transform 0.1s, box-shadow 0.1s;
-      font-weight: bold;
-    margin-left: 350px;
-    margin-top: 20px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-    border: none;
+    font-weight: bold;
+    background-color: rgba(220, 19, 12, 0.895);
+    margin-left: 330px;
+    margin-top: 30px;
+    border-radius: 18px;
+    border: 3px solid rgb(241, 241, 241);
+    letter-spacing: normal;
 }
 #atRedFlag{
     width: 200px;
     height: 25px;
     background-color: #ea3030;
-    position: absolute;
     border-radius: 10px 10px 0px 0px;
-    left: 882px;
-    top: 20px;
     cursor: pointer;
+    position: relative;
+    left: 450px;
+}
+#imgInp{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#audioInp{
+    display: flex;
+    margin-left: 35px;
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: normal;
+    font-weight: bold;
+    font-size: 10px;
+    width: 160px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 2px solid #2b4bff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #000000;
 }

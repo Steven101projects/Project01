@@ -20,40 +20,49 @@
     <div class="recordStation">
     <div id="hoverText"></div>
     <div class="addTrack" id="atBtn"></div>
+    <div id="rcdATracker">
     <div id="atRedFlag"></div>
     <div id="addTracker">
         <section id="leftside">
             <div id="addTitle">ADD TRACKER</div>
-        <div id="albumCover"><p>Upload an Album Cover</p></div>
+        <div id="albumCover">
+            <input type="file" accept="image/*" id="image-input" style="display: none;">
+            <label id="imgInp" for="image-input">Upload an Album Cover</label>
+        </div>
+        <input type="file" id="audio-input" accept="audio/*" style="display: none;" required>
+  <label id="audioInp" for="audio-input" class="custom-label">Choose an Audio File</label>
         </section>
         <div id="inputs">
             <form>
               <div class="inp">
                 <label for="title" class="label">Title:</label>
-                <input class="textBx" type="text" id="title" name="title" placeholder="The Bends" required>
+                <input class="textBx" type="text" id="title" name="title" placeholder="The Bends" >
               </div>
               <div class="inp">
                 <label for="year" class="label">Year:</label>
-                <input class="textBx" type="number" id="year" name="year" placeholder="1996" required>
+                <input class="textBx" type="number" id="year" name="year" placeholder="1996" >
               </div>
               <div class="inp">
                 <label for="author" class="label">Artist:</label>
-                <input class="textBx" type="text" id="artist" name="artist" placeholder="Radiohead" required>
+                <input class="textBx" type="text" id="artist" name="artist" placeholder="Radiohead">
               </div>
               <div>
-                <button id="upload" type="submit">Upload</button>
+                <button id="upload" type="submit">Create</button>
               </div>
             </form>
           </div>    
     </div>
+</div>
     <div id="rcdPlayer">
-        <div class="vinyl"></div>
+        <div id="vinyl">
+            <input type="file" accept="image/*" id="vinyl-input" style="display: none;">
+        </div>
         <div id="turntable">
             <div id="descrip" class="low">
                 <div id="songTitle"><p>India Rubber</p></div>
             </div>
             <div id="centor">
-                <audio id="audio" src="thinking_out_loud.mp3"></audio>
+                <audio id="audio" src=""></audio>
                 <div id="albumCard">
                     <p id="albumTitle">Unknown</p>
                 </div>
@@ -83,20 +92,10 @@
 <input type="image" src="vinylbutton.png" id="vbtn" class="rcdButton" alt="record_button"/>
 <div class="recStore" id="recordStore">
     <div id="records">
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
-        <div class="rd"></div>
+        <img alt="track" src="Thinking_Out_Loud_cover.png" id="test" class="rd"></img>
     </div>
 </div>
 </body>
 <script src="record.js"></script>
+<script src="track.js"></script>
 </html>

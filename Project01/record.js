@@ -14,6 +14,8 @@ let home = document.getElementById("home");
 
 home.onclick = function() {
     document.getElementById("rcdPlayer").style.display = "block";
+    document.getElementById("rcdATracker").style.display = "none";
+    addTrackbtn.style.display = "block";
     signal = 0;
 }
 
@@ -49,6 +51,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
+//The Tracks
 function StoreContents() {
     if(r){
         thrcds.style.whiteSpace = "wrap";
@@ -75,26 +78,31 @@ pause.onclick = function(){
 }
 let slider = document.getElementById("slider");
 
-slider.addEventListener("input", function(){
- slider.style.background = `linear-gradient(to right, #000000 ${slider.value}%, #ffffff 0%)`; 
- console.log(slider.value);
- audio.currentTime = (slider.value / 100) * audio.duration;
- console.log(audio.currentTime);
- audio.pause();
-})
-
-audio.addEventListener('loadedmetadata', () => {
+  audio.addEventListener('loadedmetadata', () => {
+    // Set max to the audio duration (in seconds)
     slider.max = audio.duration;
-    console.log(audio);
+    slider.value = 0;
+    // Initially, the progress is 0%
+    slider.style.background = `linear-gradient(to right, #000000 0%, #ffffff 100%)`;
     updateTimeDisplay();
   });
-
-audio.addEventListener('timeupdate', () => {
-    slider.value = (audio.currentTime / audio.duration) * 100;
-    slider.style.background = `linear-gradient(to right, #000000 ${slider.value}%, #ffffff 0%)`; 
-    updateTimeDisplay()
+  
+  slider.addEventListener("input", function () {
+    // slider.value now represents seconds directly
+    audio.currentTime = parseFloat(slider.value);
+    // Calculate the percentage of the audio that has played
+    const percent = (audio.currentTime / audio.duration) * 100;
+    slider.style.background = `linear-gradient(to right, #000000 ${percent}%, #ffffff 0%)`;
+    console.log(audio.currentTime);
   });
-
+  
+  audio.addEventListener('timeupdate', () => {
+    // Update slider value directly with current time in seconds
+    slider.value = audio.currentTime;
+    const percent = (audio.currentTime / audio.duration) * 100;
+    slider.style.background = `linear-gradient(to right, #000000 ${percent}%, #ffffff 0%)`;
+    updateTimeDisplay();
+  });
 
   function formatTime(time) {
     const minutes = Math.floor(time / 60);
@@ -112,8 +120,17 @@ audio.addEventListener('timeupdate', () => {
 let addTrackbtn = document.getElementById("atBtn");
 let hoverOpt = document.getElementById("hoverText");
 
+document.getElementById("atRedFlag").addEventListener("click", function (){
+    document.getElementById("rcdPlayer").style.display = "block";
+    document.getElementById("rcdATracker").style.display = "none";
+    addTrackbtn.style.display = "block";
+    signal = 0;
+})
+
 addTrackbtn.addEventListener("click", function(){
     document.getElementById("rcdPlayer").style.display = "none";
+    document.getElementById("rcdATracker").style.display = "block";
+    addTrackbtn.style.display = "none";
     signal = 1;
 })
 
@@ -132,3 +149,4 @@ addTrackbtn.addEventListener('pointerleave', function(){
     }
     hoverOpt.textContent = "";
 })
+
