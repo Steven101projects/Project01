@@ -32,6 +32,8 @@ function InitProject01(){
 
 document.getElementById("upload").addEventListener("click", function (e){
     e.preventDefault();
+    const storedData = localStorage.getItem('records');
+    tracks = JSON.parse(storedData);
     let title = document.getElementById("title").value;
     let year = document.getElementById("year").value;
     let artist = document.getElementById("artist").value;

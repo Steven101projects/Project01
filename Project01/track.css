@@ -149,7 +149,7 @@
 
 #loadSongs{
     display: flex;
-    position: relative;
+    position: absolute;
     font-family: 'Inter', sans-serif;
     letter-spacing: normal;
     font-weight: bold;
@@ -161,7 +161,7 @@
     align-items: center;
     border-radius: 5px;
     color: #2f2e2e;
-    top: 100px;
+    top: 300px;
     margin-left: 10px;
 }
 
